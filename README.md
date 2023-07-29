@@ -27,15 +27,27 @@ docker run -it -p 8000:8000 -p 8080:8080 fast_api
 python3 pytest.py -text 100 -images 100
 ```
 
-# Avg Response time
+# Avg Response time on AWS EC2 server
+- Created a AWS EC2 instance (t3a.medium, ubuntu, 32 GB) and configured the inbound security ports for 8000 and 8080
+
+- Copy the code folder inside EC2 instances 
+```
+ssh ubuntu@<ip address>
+scp -r <local folder location> ubuntu@<ip address>:<VM file location>
+```
+
+- Built and run the docker instances inside EC2 machine
+
+- Executed the pytest script on local to check the average reponse time
+
 ```
 No of Text queries - 100
- Total Execution Time - 55010.391ms
- Avg Execution Time   - 550.104 ms
+ Total Execution Time - 224843.303ms
+ Avg Execution Time   - 2248.433 ms
 
 No of Images - 100
- Total Execution Time - 1343.443ms
- Avg Execution Time   - 13.434 ms
+ Total Execution Time - 12234.898ms
+ Avg Execution Time   - 122.349 ms
  ``` 
 
 # Group Members:

@@ -15,7 +15,8 @@ args = parser.parse_args()
 ## --- GPT Module ----- ##
 ## -------------------- ##
 
-url = "http://127.0.0.1:8080/infer/"
+url = "http://15.207.109.7:8080/infer/"
+# url = "http://127.0.0.1:8080/infer/"
 def random_line(afile):
     line = next(afile)
     for num, aline in enumerate(afile, 2):
@@ -68,7 +69,8 @@ def chooseRandomImage(directory="./Data/mnist_images"):
 
 
 
-url = "http://127.0.0.1:8000/infer/"
+url = "http://15.207.109.7:8000/infer/"
+# url = "http://127.0.0.1:8000/infer/"
 exection_time = []
 
 img_size = args.images
